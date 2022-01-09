@@ -33,7 +33,9 @@ calcularTotal = () => {
     console.log(informe);
 
     informeTotal.push(idTotal.value);
-    informeTotal.sort();
+    informeTotal.sort(function compareNumbers(a, b) {
+        return a - b;
+      });
     console.log('Valores totales ordenados: ', informeTotal);
 
     aux += 1;
