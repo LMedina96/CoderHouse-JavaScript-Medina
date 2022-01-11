@@ -37,7 +37,7 @@ calcularTotal = () => {
 
 ordenarObjeto = () => {
     informe.sort(function compareNumbers(a, b) {
-        return a.idMonto - b.idMonto;
+        return b.monto - a.monto;
       }); 
       console.table(informe);
 }
