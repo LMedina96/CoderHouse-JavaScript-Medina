@@ -30,13 +30,14 @@ calcularTotal = () => {
     idTotal.value = parseFloat(idMonto.value) + parseFloat(idIva.value);
 
     informe[aux] = new Informe(idMonto.value, idIva.value, idTotal.value);
-    console.log(informe);
-
-    informeTotal.push(idTotal.value);
-    informeTotal.sort(function compareNumbers(a, b) {
-        return a - b;
-      });
-    console.log('Valores totales ordenados: ', informeTotal);
+    console.table(informe);
 
     aux += 1;
+}
+
+ordenarObjeto = () => {
+    informe.sort(function compareNumbers(a, b) {
+        return a.idMonto - b.idMonto;
+      }); 
+      console.table(informe);
 }
