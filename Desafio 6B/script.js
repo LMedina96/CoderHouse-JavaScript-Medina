@@ -2,7 +2,6 @@ let idMonto = document.getElementById("idMonto");
 let idIva = document.getElementById("idIva");
 let idTotal = document.getElementById("idTotal");
 let informe = [];
-let informeTotal = [];
 let aux = 0;
 
 class Informe{
@@ -39,5 +38,6 @@ ordenarObjeto = () => {
     informe.sort(function compareNumbers(a, b) {
         return b.monto - a.monto;
       }); 
+      console.warn("Ordenando precios de mayor a menor...")
       console.table(informe);
 }
