@@ -33,15 +33,7 @@ calcularIva = () => {
     idIvaTotal.value = totalIva
 }
 
-ordenarObjeto = () => {
-    informe.sort(function compareNumbers(a, b) {
-        return b.monto - a.monto;
-      }); 
-      console.info("Ordenando precios de mayor a menor...")
-      console.table(informe);
-}
-
-$("#buttonTotal").click(() => {
+calcularTotal = () => {
     idTotal.value = 
     parseFloat(idMontoTotal.value) + parseFloat(idIvaTotal.value);
 
@@ -57,25 +49,12 @@ $("#buttonTotal").click(() => {
     document.getElementById("historial").appendChild(nuevoRegistro);
 
     aux += 1;
+}
 
-    console.log("Registro añadido con jQuery correctamente")
-})
-
-$("#historial").hover(() => {
-    let historial = document.getElementById("historial");
-    historial.style.boxShadow = "10px 10px 12px 0px rgba(0,0,0,0.75)"
-    
-},
-() =>{
-    historial.style.boxShadow = "0 0 0 0"
-})
-
-$("input").focus(() => {
-    let caja = document.getElementById("calculator");
-    caja.style.boxShadow = "10px 10px 12px 0px rgba(0,0,0,0.75)";
-})
-
-$("input").blur(() => {
-    let caja = document.getElementById("calculator");
-    caja.style.boxShadow = "0 0 0 0";
-})
+ordenarObjeto = () => {
+    informe.sort(function compareNumbers(a, b) {
+        return b.monto - a.monto;
+      }); 
+      console.info("Ordenando precios de mayor a menor...")
+      console.table(informe);
+}
