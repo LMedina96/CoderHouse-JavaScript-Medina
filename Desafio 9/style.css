@@ -8,19 +8,18 @@
     justify-content: space-evenly;
 }
 
-#calculator *{
+.calculator *{
     margin: 0.5rem;
     padding: 0.5rem;
 }
 
-#calculator{
-    width: 350px;
+.calculator{
+    width: 300px;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
 }
 
-#calculator button, #calculator input{
+.calculator button, .calculator input{
     width: 250px;
 }
 

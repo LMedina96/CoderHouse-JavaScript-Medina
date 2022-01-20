@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js" async></script>
-    <title>Desafio 9</title>
+    <title>Desafio 8</title>
 </head>
 <body>
-    <h1>¡Desafio 9!</h1>
+    <h1>¡Desafio 8!</h1>
 
     <div id="body">
-        <div id="calculator">
+        <div class="calculator">
             <h2>Caja registradora</h2>
             
             <fieldset>
@@ -37,18 +36,21 @@
             </fieldset>
     
             <fieldset>
-                <button type="button" id="buttonTotal">Calcular total</button></br>
+                <button type="button" onclick="calcularTotal()">Calcular total</button></br>
                 <input type="text" name="total" id="idTotal" placeholder="Total producto" disabled>
                 <button type="button" onclick="ordenarObjeto()">¡Ordenar por precio de mayor a menor en la consola!</button>
             </fieldset>
         </div>
     
         <div id="registro">
-            <h3>Registro</h3>
+            <h3>registro</h3>
             <ul id="historial">
     
             </ul>
         </div>
     </div>
+
+
+
 </body>
 </html>
