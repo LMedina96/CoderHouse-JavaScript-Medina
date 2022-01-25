@@ -7,38 +7,51 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js" async></script>
-    <title>Desafio 8</title>
+    <title>Segunda Preentrega</title>
 </head>
 <body>
-    <h1>¡Desafio 8!</h1>
+    <h1>¡Segunda Preentrega!</h1>
+
+    <nav id="navBar">
+        <button type="button" id="btnRegistro" onclick="registrarse()">Registrarse</button>
+        <button type="button" id="btnLogueo" onclick="iniciarSession()">Loguiarse</button>
+    </nav>
+
+    <div id="bienvenida">
+
+    </div>
 
     <div id="body">
         <div id="calculator">
             <h2>Caja registradora</h2>
             
-            <fieldset>
+            <fieldset id="datosACompletar">
                 <label for="articulo">Articulo</label>
                 <input type="text" name="articulo" id="idArticulo" placeholder="Articulo a facturar">
+
                 <label for="cantidad">Cantidad de articulos</label>
                 <input type="number" name="cantidad" id="idCantidad" min="1" placeholder="Numero de articulos">
-                <button type="button" onclick="calcularMonto()">Ingresar monto del producto (c/u)</button></br>
-                <input type="text" name="monto" id="idMonto" disabled placeholder="Monto"></br>
+
+                <!--<button type="button" onclick="calcularMonto()">Ingresar monto del producto (c/u)</button></br>-->    
+                <label for="monto">Monto de cada producto</label>
+                <input type="number" name="monto" id="idMonto" placeholder="Ingresar monto del producto (c/u)"></br>
             </fieldset>
     
             <h3>Ticket</h3>
     
             <fieldset>
+                <label for="montoTotal">Monto</label>
                 <input type="text" name="montoTotal" id="idMontoTotal" disabled placeholder="Monto total"></br>
-            </fieldset>
-            
-            <fieldset>
-                <button type="button" onclick="calcularIva()">Calcular IVA total</button></br>
+                <!--<button type="button" onclick="calcularIva()">Calcular IVA total</button></br> -->
+                <label for="iva">IVA</label>
                 <input type="text" name="iva" id="idIva" placeholder="IVA del producto" disabled></br>
+                <label for="total">Monto total</label>
+                <input type="text" name="total" id="idTotal" placeholder="Total producto" disabled>
             </fieldset>
     
             <fieldset>
-                <button type="button" id="buttonTotal">Calcular total</button></br>
-                <input type="text" name="total" id="idTotal" placeholder="Total producto" disabled>
+                <button type="button" onclick="generarTicket()" id = "btnGenerarTicket">Generar ticket</button>
+                <button type="button" id="buttonTotal">Registrar ticket</button></br>
                 <button type="button" onclick="ordenarObjeto()">¡Ordenar por precio de mayor a menor en la consola!</button>
             </fieldset>
         </div>
@@ -48,7 +61,11 @@
             <ul id="historial">
     
             </ul>
+            <button type="button" onclick="export2txt()">Descargar informe a tu computadora</button>
         </div>
     </div>
+
+
+
 </body>
 </html>
