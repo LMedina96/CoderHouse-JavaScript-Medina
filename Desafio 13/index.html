@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" async></script>
+    <title>Desafio 13</title>
+</head>
+<body>
+    <h1>¡Desafio 13!</h1>
+
+    <nav id="navBar">
+
+        <div id="menuRegistro">
+            <p class="msgFeedback" id="mensajeRegistroExitoso" style= "color: green">Registro exitoso</p>
+            <button type="button" id="btnRegistro">Registrarse</button>
+            <button type="button" id="btnLogueo">Loguiarse</button>
+        </div>
+
+        <div id="formularioRegistro">
+            <h3>Registrarse</h3>
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" id="idUsuario"><br>
+            <label for="contrasenia">Contraseña:</label>
+            <input type="password" name="contrasenia" id="idContrasenia"><br>
+            <label for="confirmarContrasenia">Confirmar contraseña:</label>
+            <input type="password" name="confirmarContrasenia" id="idConfirmarContrasenia"><br>
+
+            <p class="msgFeedback" id="errorContraseniasDesiguales">Las contraseñas no coinciden :(</p>
+            <p class="msgFeedback" id="errorCamposVacios">Por favor revisa de completar todos los campos</p>
+
+            <button id="btnRegistrarse">¡Registrarse!</button>
+            <button class="btnCancelar">Cancelar</button>
+        </div>
+    
+        <div id="login">
+            <h3>Iniciar Sessión</h3>
+            <label for="usuarioLogueo">Usuario:</label>
+            <input type="text" name="usuarioLogueo" id="idUsuarioLogueo"><br>
+            <label for="contraseniaLogueo">Contraseña:</label>
+            <input type="password" name="contraseniaLogueo" id="idContraseniaLogueo"><br>
+
+            <p class="msgFeedback" id="errorInicioSessionIncorrecto">¡Los datos de inicio de sessión no son correctos!</p>
+            <button type="button" id="btnIniciarSession">Iniciar Session</button>
+            <button class="btnCancelar">Cancelar</button>
+        </div>
+    
+        <div id="bienvenida">
+            
+        </div>
+    </nav>
+
+    <div id="body">
+        <div id="calculator">
+            <h2>Caja registradora</h2>
+            
+            <fieldset id="datosACompletar">
+                <label for="articulo">Articulo</label>
+                <input type="text" name="articulo" id="idArticulo" placeholder="Articulo a facturar">
+
+                <label for="cantidad">Cantidad de articulos</label>
+                <input type="number" name="cantidad" id="idCantidad" min="1" placeholder="Numero de articulos">
+
+                <label for="monto">Monto de cada producto</label>
+                <input type="number" name="monto" id="idMonto" min="0" placeholder="Ingresar monto del producto (c/u)"></br>
+            </fieldset>
+    
+            <h3>Ticket</h3>
+    
+            <fieldset>
+                <label for="montoTotal">Monto</label>
+                <input type="text" name="montoTotal" id="idMontoTotal" disabled placeholder="Monto total sin IVA"></br>
+                <label for="iva">IVA</label>
+                <input type="text" name="iva" id="idIva" placeholder="IVA del producto" disabled></br>
+                <label for="total">Monto total</label>
+                <input type="text" name="total" id="idTotal" placeholder="Total producto" disabled>
+            </fieldset>
+    
+            <fieldset>
+                <button type="button" id="ButtonGenerarTicket" onclick="generarTicket()" id = "btnGenerarTicket">Generar ticket</button>
+                <button type="button" id="buttonTotal">Registrar ticket</button></br>
+            </fieldset>
+        </div>
+    
+        <div id="registro">
+            <h3>Registro</h3>
+            <ul id="historial">
+    
+            </ul>
+            <button type="button" onclick="export2txt()">Descargar informe a tu computadora</button>
+        </div>
+    </div>
+</body>
+</html>
