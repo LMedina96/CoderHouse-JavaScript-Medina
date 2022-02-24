@@ -129,7 +129,6 @@ $("#ButtonGenerarTicket").click(() => {
         calcularIva();
         idTotal.value = 
         parseFloat(idMontoTotal.value) + parseFloat(idIvaTotal.value);
-        document.getElementById("btnGenerarTicket").style = "border: 1px solid black";
     }
 })
 
