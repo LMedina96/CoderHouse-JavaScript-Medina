@@ -125,3 +125,13 @@ button {
     padding: 0.5rem;
     background-color: white;
 }
+
+@media (width <= 860px) {
+    #body {
+        flex-direction: column;
+    }
+
+    #calculator {
+        margin: 2rem auto;
+    }
+}
